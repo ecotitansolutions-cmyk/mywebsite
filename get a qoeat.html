@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--font awesome CND-->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<title>Contact Us</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#071a2d;
+    color:white;
+}
+
+.contact-section{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title h1{
+    font-size:45px;
+    color:#fff;
+}
+
+.title h1 span{
+    color:#00d4ff;
+}
+
+.contact-box{
+    display:flex;
+    flex-wrap:wrap;
+    background:#0b2340;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.contact-info{
+    flex:1;
+    min-width:300px;
+    padding:40px;
+    background:#102b4c;
+}
+
+.contact-info h3{
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    margin:15px 0;
+}
+
+.contact-form{
+    flex:2;
+    min-width:300px;
+    padding:40px;
+}
+
+.form-row{
+    display:flex;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #2f4f73;
+    border-radius:8px;
+    background:#081827;
+    color:white;
+}
+
+textarea{
+    height:120px;
+}
+
+button{
+    background:#00d4ff;
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#00a8cc;
+}
+.follow-us{
+    margin-top:40px;
+}
+
+.follow-us h4{
+    color:#fff;
+    margin-bottom:15px;
+}
+
+.follow-us a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:40px;
+    height:40px;
+    margin-right:10px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.1);
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.follow-us a:hover{
+    background:#00d4ff;
+    transform:translateY(-3px);
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="contact-section">
+
+<div class="title">
+<p>CONTACT US</p>
+<h1>Get In Touch With <span>Our EcoTitan Team</span></h1>
+</div>
+
+<div class="contact-box">
+
+<div class="contact-info">
+<h3>CONTACT INFORMATION</h3>
+
+<p>📞 +91 7567615076
+    +91 8140007102
+</p>
+
+
+<p>✉️ ecotitansolutions@gmail.com</p>
+
+
+<p>📍 Rajkot , Gujarat, India</p><br><br><br><br><br>  
+
+<div class="follow-us">
+    <h4>FOLLOW US</h4>
+
+    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        
+    
+
+    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        
+    
+
+    <a href="https://www.instagram.com/ecotitan_solutions" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        
+    
+</div>
+</div>
+
+
+<div class="contact-form">
+
+<form id="contactForm">
+
+<div class="form-row">
+<input type="text" id="name" placeholder="Full Name" required>
+<input type="email" id="email" placeholder="Email Address" required>
+</div>
+
+<div class="form-row">
+<input type="text" id="phone" placeholder="Phone Number" required>
+<input type="text" id="country" placeholder="Country">
+</div>
+
+
+<select id="product">
+<option>select product types</option>
+<option>PP Granules</option>
+<option>HDPE Granules</option>
+<option>LDPE Granules</option>
+<option>ABS Granules</option>
+</select>
+
+<br><br>
+
+<textarea id="message" placeholder="Your Message"></textarea>
+
+<br><br>
+
+<button type="submit">Send Inquiry</button>
+
+</form>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let phone = document.getElementById("phone").value;
+let country = document.getElementById("country").value;
+let product = document.getElementById("product").value;
+let message = document.getElementById("message").value;
+
+let whatsappMessage =
+`*New Inquiry - Eco Titan Solution*%0A%0A
+Name: ${kaushal}%0A
+Email: ${navapariyayash@gmail.com}%0A
+Phone: ${8140007102}%0A
+Country: ${india}%0A
+Product: ${plastuc granules}%0A
+Message: ${message}`;
+
+window.open(
+`https://wa.me/7567615076?text=${whatsappMessage}`,
+"_blank"
+);
+
+});
+</script>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

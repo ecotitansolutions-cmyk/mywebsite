@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eco Titan Solution</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0d1b2a;
+}
+
+header{
+    width:100%;
+    padding:20px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0px;
+    bottom: 590px;
+    z-index:1000;
+}
+
+.logo{
+    color:#00bfff;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin:0 20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+}
+
+.btn{
+    background:#1e90ff;
+    color:white;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1578575437130-527eed3abbec');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+}
+
+.hero-content{
+    max-width:650px;
+    color:white;
+}
+
+.hero-content span{
+    color:#00bfff;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:18px;
+    margin-bottom:30px;
+    line-height:1.6;
+}
+
+.hero-buttons a{
+    display:inline-block;
+    margin-right:15px;
+    padding:14px 28px;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+.primary{
+    background:#1e90ff;
+    color:white;
+}
+
+.secondary{
+    border:2px solid white;
+    color:white;
+}
+
+/* WhatsApp FAB - FIXED */
+.whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: #25d366;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    z-index: 999;
+    transition: all 0.2s ease;
+}
+
+.whatsapp-float:hover {
+    background: #1ebe57;
+    transform: scale(0.9);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo"><img src="logo.png" style="width:150px"></div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="products.html">Product</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <a href="get a qoeat.html" class="btn">Get A Quote</a>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>
+            CONNECTING <span>GLOBAL TRADE</span><br>
+            DELIVERING TRUST
+        </h1>
+        <p>
+            Premium Plastic Granules Exporter & Supplier.
+            PP, HDPE, LDPE, ABS and Engineering Plastic
+            Solutions Across The World.
+        </p>
+        <div class="hero-buttons">
+            <a href="#" class="primary">Explore Service</a>
+            <a href="#" class="secondary">Watch Video</a>
+        </div>
+    </div>
+</section>
+
+<!-- WhatsApp Button - BODY na end ma -->
+<a href="https://wa.me/918140007102" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+         alt="WhatsApp" width="35" height="35">
+</a>
+
+</body>
+</html>

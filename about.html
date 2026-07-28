@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Ocean Liaison Ltd.</title>
+  <meta name="description" content="Building bridges across the oceans. Learn about Ocean Liaison, our global import-export mission, vision, and maritime logistics team." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #112244;
+      --navy-card: #0e1d36;
+      --blue-accent: #1a6bbf;
+      --blue-light: #2d8dd9;
+      --gold: #c9a84c;
+      --gold-light: #e4c06a;
+      --text-light: #f0f4f8;
+      --text-muted: #8fa3bc;
+      --border: rgba(255,255,255,0.08);
+      --card-bg: rgba(255,255,255,0.04);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--navy);
+      color: var(--text-light);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 22, 40, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo-text { font-size: 1.25rem; font-weight: 700; color: #fff; letter-spacing: 0.03em; }
+    .nav-logo-text span { color: var(--gold); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.active { color: #fff; }
+    .nav-cta { background: var(--gold); color: var(--navy); padding: 0.5rem 1.25rem; border-radius: 6px; text-decoration: none; font-size: 0.875rem; font-weight: 600; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--gold-light); }
+
+    /* ── HERO ── */
+    .hero {
+  position: relative;
+  background: 
+    linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)),
+    url('https://images.unsplash.com/photo-1578575437130-527eed3abbec');
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 5% 4rem;
+  text-align: center;
+  overflow: hidden;
+}
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold);
+       background: rgba(6,182,212,0.15);
+      border: 1px solid rgba(6,182,212,0.4);
+      padding: 0.35rem 1rem; border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 600; line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 520px; margin: 0 auto; line-height: 1.7; }
+
+    /* ── ABOUT MAIN ── */
+    .about-section {
+      padding: 5rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* LEFT: text */
+    .about-left {}
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .about-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.25rem);
+      font-weight: 600; line-height: 1.25;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-left p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 1.1rem;
+    }
+
+    /* CEO card */
+    .ceo-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.3rem;
+    }
+    .ceo-avatar {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue-accent), #0a4a8c);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; font-weight: 700; color: #fff;
+      flex-shrink: 0;
+      border: 2px solid rgba(201,168,76,0.3);
+    }
+    .ceo-info {}
+    .ceo-name { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 2px; }
+    .ceo-title { font-size: 0.8rem; color: var(--gold); font-weight: 500; letter-spacing: 0.04em; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--gold); color: var(--navy);
+      padding: 0.75rem 1.75rem; border-radius: 8px;
+      text-decoration: none; font-weight: 700; font-size: 0.9rem;
+      transition: background 0.2s, transform 0.15s;
+      margin-top: 1.5rem;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    /* RIGHT: images */
+    .about-right {
+      position: relative;
+    }
+
+    .img-stack {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 12px;
+    }
+
+    .img-main {
+      grid-column: 1 / -1;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, #0d2a4d, #112244);
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .img-sub {
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #0d2a4d, #112244);
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .img-placeholder {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.5rem; width: 100%; height: 100%; padding: 1rem;
+    }
+    .img-placeholder .img-icon { font-size: 2.5rem; opacity: 0.5; }
+    .img-placeholder .img-label { font-size: 0.75rem; color: var(--text-muted); text-align: center; opacity: 0.7; }
+
+    /* overlay badge on main image */
+    .img-badge {
+      position: absolute;
+      bottom: 12px; left: 12px;
+      background: rgba(10,22,40,0.85);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 8px;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.75rem;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      backdrop-filter: blur(6px);
+    }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: var(--navy-mid);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 5%;
+    }
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+    .stat-item { padding: 1rem; }
+    .stat-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; font-weight: 700;
+      color: var(--gold); line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .stat-label { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+
+    /* ── MARQUEE ── */
+    .marquee-section {
+      padding: 2rem 0;
+      overflow: hidden;
+      background: #070f1e;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .marquee-track {
+      display: flex;
+      gap: 3rem;
+      animation: marquee 18s linear infinite;
+      white-space: nowrap;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text-muted); flex-shrink: 0;
+    }
+    .marquee-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* ── VALUES ── */
+    .values-section {
+      padding: 5rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .values-header { text-align: center; margin-bottom: 3rem; }
+    .values-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 600; margin-bottom: 0.75rem;
+    }
+    .values-header p { color: var(--text-muted); font-size: 0.95rem; max-width: 480px; margin: 0 auto; line-height: 1.6; }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+    .value-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem 1.3rem;
+      transition: border-color 0.3s, background 0.3s, transform 0.2s;
+    }
+    .value-card:hover {
+      border-color: rgba(26,107,191,0.4);
+      background: rgba(26,107,191,0.07);
+      transform: translateY(-3px);
+    }
+    .value-icon { font-size: 1.8rem; margin-bottom: 0.9rem; display: block; }
+    .value-title { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.45rem; }
+    .value-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #070f1e;
+      border-top: 1px solid var(--border);
+      padding: 3rem 5% 2rem;
+    }
+    .footer-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 2.5rem; margin-bottom: 2.5rem;
+    }
+    .footer-logo-text { font-size: 1.1rem; font-weight: 700; color: #fff; }
+    .footer-logo-text span { color: var(--gold); }
+    .footer-brand p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; margin-top: 0.75rem; margin-bottom: 1rem; }
+    .social-links { display: flex; gap: 0.75rem; }
+    .social-links a {
+      width: 34px; height: 34px; border-radius: 6px;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); text-decoration: none; font-size: 0.8rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .social-links a:hover { border-color: var(--blue-accent); color: #fff; }
+    .footer-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.6rem; }
+    .footer-col ul a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .footer-col ul a:hover { color: #fff; }
+    .contact-item { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .contact-item .icon { color: var(--gold); font-size: 1rem; margin-top: 1px; flex-shrink: 0; }
+    .contact-item a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; }
+    .contact-item a:hover { color: #fff; }
+    .contact-item span { color: var(--text-muted); font-size: 0.875rem; }
+    .footer-bottom {
+      max-width: 1100px; margin: 0 auto;
+      border-top: 1px solid var(--border); padding-top: 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: 0.8rem; color: var(--text-muted); }
+    .footer-bottom a { color: var(--text-muted); text-decoration: none; margin-left: 1rem; font-size: 0.8rem; }
+    .footer-bottom a:hover { color: #fff; }
+
+    /* ── WHATSAPP ── */
+    .wa-float {
+      position: fixed; bottom: 1.5rem; right: 1.5rem;
+      width: 52px; height: 52px; background: #25d366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+      transition: transform 0.2s, box-shadow 0.2s; z-index: 200;
+    }
+    .wa-float:hover { transform: scale(1.08); box-shadow: 0 6px 20px rgba(37,211,102,0.55); }
+    .wa-float svg { width: 26px; height: 26px; fill: #fff; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 480px) {
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo"><img src="logo.png" style="width:100px";></div>
+    <ul class="nav-links">
+      <li><a href="C:\Users\kaush\Desktop\website\prit.html">Home</a></li>
+      <li><a href="C:\Users\kaush\Desktop\website\products.html">Products</a></li>
+      <li><a href="C:\Users\kaush\Desktop\website\process.html">Process</a></li>
+      <li><a href="/about" class="active">About Us</a></li>
+      <li><a href="C:\Users\kaush\Desktop\website\contact.html">Contact</a></li>
+    </ul>
+    <a href="C:\Users\kaush\Desktop\website\get a qoeat.html" class="nav-cta">Get A Quote</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">Who We Are</div>
+    <h1>About Us</h1>
+    <p>Building bridges across the oceans with reliable global maritime &amp; logistics solutions.</p>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item"><span class="marquee-dot"></span>Import &amp; Export</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Maritime Logistics</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Customs Clearance</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Global Shipping</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Supply Chain</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Cargo Management</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Worldwide Network</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Trusted Partners</span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item"><span class="marquee-dot"></span>Import &amp; Export</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Maritime Logistics</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Customs Clearance</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Global Shipping</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Supply Chain</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Cargo Management</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Worldwide Network</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Trusted Partners</span>
+    </div>
+  </div>
+
+  <!-- ABOUT MAIN -->
+  <section style="padding: 5rem 5%;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div class="about-grid">
+
+        <!-- LEFT: text -->
+        <div class="about-left">
+          <div class="section-eyebrow">About Us</div>
+          <h2>Building Bridges Across The Oceans</h2>
+          <p>Ocean Liaison Global Maritime &amp; Logistics is a trusted import-export company providing efficient and reliable logistics solutions across the globe.</p>
+          <p>With our extensive global network and deep industry expertise, we design bespoke supply chain solutions that adapt to your business needs. From customs navigation to multimodal transit, we handle every detail with precision.</p>
+          <p>By leveraging state-of-the-art tracking technologies and maintaining close relationships with major global carriers, we provide real-time updates and seamless cargo management.</p>
+          <p>We are committed to delivering quality, transparency, and operational excellence in every shipment, ensuring your cargo reaches its destination safely and efficiently.</p>
+
+          <!-- CEO -->
+          <div class="ceo-card">
+            <div class="ceo-avatar">V</div>
+            <div class="ceo-info">
+              <div class="ceo-name">patel</div>
+              <div class="ceo-title">CEO, Ecotitan Solution</div>
+            </div>
+          </div>
+
+          <a href="/contact" class="btn-primary">Get in Touch →</a>
+        </div>
+
+        <!-- RIGHT: image mosaic -->
+        <div class="about-right">
+          <div class="img-stack">
+            <!-- Main ship image -->
+            <div class="img-main">
+              <div class="img-placeholder">
+                <span class="img-icon">🚢</span>
+                <span class="img-label">Cargo ship at ocean</span>
+              </div>
+              <div class="img-badge">🌊 Ocean Liaison Fleet</div>
+            </div>
+            <!-- Sub images -->
+            <div class="img-sub">
+              <div class="img-placeholder">
+                <span class="img-icon">🚛</span>
+                <span class="img-label">Cargo truck</span>
+              </div>
+            </div>
+            <div class="img-sub">
+              <div class="img-placeholder">
+                <span class="img-icon">🤝</span>
+                <span class="img-label">Corporate handshake</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-value">2+</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">50+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">Expert</div>
+        <div class="stat-label">Team</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" style="font-size:1.5rem;">Worldwide</div>
+        <div class="stat-label">Network</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VALUES -->
+  <section class="values-section">
+    <div class="values-header">
+      <div class="section-eyebrow">Our Values</div>
+      <h2>What Drives Us</h2>
+      <p>Every shipment we handle is guided by the principles that define who we are.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <span class="value-icon">🎯</span>
+        <div class="value-title">Precision</div>
+        <div class="value-desc">We handle every shipment detail with meticulous care and accuracy.</div>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">🔍</span>
+        <div class="value-title">Transparency</div>
+        <div class="value-desc">Real-time updates and clear communication at every stage of transit.</div>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">🛡️</span>
+        <div class="value-title">Reliability</div>
+        <div class="value-desc">Your cargo reaches its destination safely, on time, every time.</div>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">🌐</span>
+        <div class="value-title">Global Reach</div>
+        <div class="value-desc">An extensive worldwide network connecting markets across continents.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-text">Ocean <span>Liaison</span></div>
+        <p>Your trusted partner in global import &amp; export. We connect markets, deliver trust, and grow together with end-to-end maritime &amp; logistics services.</p>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://www.instagram.com/ecotitan_solutions" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/process">Process</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="/services">Import Services</a></li>
+          <li><a href="/services">Export Services</a></li>
+          <li><a href="/services">Customs Clearance</a></li>
+          <li><a href="/services">Global Shipping</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="contact-item">
+          <span class="icon">📞</span>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;">Call Support</div>
+            <a href="tel:+917567615076">+91 7567615076</a>
+            <a href="tel:+918140007102">+91 8140007102</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="icon">✉️</span>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;">Email Inquiries</div>
+            <a href="mailto:ecotitansolutions@gmail.com">ecotitansolutions@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📍</span>
+          <span>Rajkot, Gujarat, India</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © 2026 Ecotitan Solution . All Rights Reserved.</span>
+      <div>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a class="wa-float" href="https://wa.me/918140007102?text=Hello%20Ocean%20Liaison%2C%20I%20have%20a%20logistics%20inquiry." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
